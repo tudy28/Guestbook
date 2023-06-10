@@ -1,0 +1,11 @@
+<button (click)="openInputDialog()"> Press me</button>
+<div class="reviews-container">
+  <div *ngFor="let review of this.reviews" class="review">
+    <div class="thumbnail">
+      <img (click)="this.openImageFullSize(review.imageUrl)" [src]="this.useResizedImage(review.imageUrl)">
+    </div>
+    <div class="review-content">
+      <p>{{review.comment}}</p>
+    </div>
+  </div>
+</div>
